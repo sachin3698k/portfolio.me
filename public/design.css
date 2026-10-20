@@ -1,78 +1,124 @@
-img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-      }
-      
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  background-color: #FAF9F6; /* Alabaster across 100% of the screen */
+  color: #1C2526;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures footer stays at the bottom of the screen */
 }
 
-/* Style the header */
+/* Header */
 .header {
-  background-color: blue;
+  background-color: #2C3E35;
+  padding: 44px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 42px;
+  color: #FAF9F6;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #84A98C;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Navigation Bar */
+.topnav {
+  background-color: #E2EAE4;
+  border-bottom: 1px solid #CFD9D2;
+  display: flex;
+  justify-content: center; /* Centers links under your header */
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+/* Navigation Links */
+.topnav a {
+  display: block;
+  color: #2C3E35;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.topnav a:hover,
+.topnav a.active {
+  background-color: #52796F;
+  color: #FAF9F6; /* Crisp off-white text for high contrast on hover */
+}
+
+/* Row Container */
+.row {
+  flex: 1; /* Pushes the footer down to the bottom */
+  width: 100%;
+}
+
+/* Column */
+.column.middle {
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto; /* Properly centers the column without float: left */
+  padding: 48px 20px;
+}
+
+.column.middle h2 {
+  color: #2C3E35;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E6E8E3;
+}
+
+.column.middle p {
+  color: #1C2526;
+  text-align: left;
+  font-size: 16.5px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1B2621;
   padding: 20px;
   text-align: center;
 }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: blanchedalmond;
+.footer p {
+  color: #CAD2C5;
+  text-align: center;
+  margin: 0;
+  font-size: 14.5px;
 }
 
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: blue;
-  text-align: center;
-  padding: 14px 16px;
+.footer a {
+  color: #84A98C;
   text-decoration: none;
+  font-weight: 500;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: blanchedalmond;
-  color: black;
-}
-
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-}
-
-/* Left and right column */
-.column.side {
-  width: 25%;
-}
-
-/* Middle column */
-.column.middle {
-  width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
-}
-
-/* Style the footer */
-.footer {
-  background-color: blue;
-  padding: 10px;
-  text-align: center;
+.footer a:hover {
+  text-decoration: underline;
+  color: #FAF9F6;
 }

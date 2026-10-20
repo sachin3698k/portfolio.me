@@ -1,0 +1,14 @@
+{
+  // The Worker name. IMPORTANT: this must match the Worker name you see in the
+  // Cloudflare dashboard, otherwise `wrangler deploy` creates a separate Worker.
+  "name": "portfolio-me",
+  "compatibility_date": "2026-10-20",
+
+  // Tells `wrangler deploy` exactly where the static site lives.
+  // Setting this makes wrangler skip its automatic framework/asset detection,
+  // which is what was producing:
+  //   "Could not detect a directory containing static files"
+  "assets": {
+    "directory": "./public"
+  }
+}

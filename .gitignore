@@ -1,0 +1,6 @@
+# Wrangler local state / build cache
+.wrangler/
+.dev.vars
+
+# Dependencies
+node_modules/

@@ -10,5 +10,22 @@
   //   "Could not detect a directory containing static files"
   "assets": {
     "directory": "./public"
+  },
+
+  // Observability settings — kept in sync with the Cloudflare dashboard
+  // (Settings > Observability). If you change these in the dashboard, update
+  // this block too, or Cloudflare will warn you about drift.
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": false,
+      "head_sampling_rate": 1,
+      "persist": true
+    }
   }
 }
